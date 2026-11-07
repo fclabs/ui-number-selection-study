@@ -19,8 +19,13 @@
   <section id="view-exp">
     <div class="toolbar">
       <button id="btn-start" class="primary">Start</button>
+      <button id="btn-practice" title="10 targets, not saved">Practice</button>
       <div id="target-box" aria-live="polite">Press Start</div>
       <div id="progress"></div>
+    </div>
+    <div class="toolbar setup">
+      <label>Participant <input id="participant" type="text" maxlength="40" placeholder="optional id"></label>
+      <label>Layout seed <input id="seed" type="text" maxlength="40" placeholder="optional, same seed = same grid"></label>
     </div>
     <div id="grid" role="grid" aria-label="Number grid"></div>
   </section>
@@ -31,6 +36,12 @@
       <label class="button">Import CSV<input id="file-import" type="file" accept=".csv,text/csv" hidden></label>
       <button id="btn-clear" class="danger">Delete all data</button>
       <span id="msg"></span>
+    </div>
+    <div class="toolbar filters">
+      <label>Participant <select id="f-participant"></select></label>
+      <label><input type="checkbox" id="f-warmup" checked> Skip first click</label>
+      <label><input type="checkbox" id="f-outliers" checked> Exclude outliers</label>
+      <label><input type="checkbox" id="f-clean"> Clean trials only</label>
     </div>
     <div id="stats"></div>
   </section>
