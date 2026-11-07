@@ -5,7 +5,7 @@
   "description": "Number selection study web app",
   "license": "MIT",
   "scripts": {
-    "test": "node --test test/",
+    "test": "node --test \"test/*.test.js\"",
     "start": "python3 -m http.server 8000 --directory site"
   }
 }
