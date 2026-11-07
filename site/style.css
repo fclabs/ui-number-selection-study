@@ -26,6 +26,17 @@ th, td { border-bottom:1px solid #ddd; padding:6px 8px; text-align:right; }
 th:first-child, td:first-child { text-align:left; }
 h2 { font-size:1.05rem; margin:20px 0 4px; }
 .heat { display:grid; grid-template-columns:repeat(10,1fr); gap:2px; max-width:480px; }
+h3 { font-size:.9rem; margin:8px 0 4px; font-weight:600; }
+.ci { color:#777; font-size:.85em; }
 .heat div { aspect-ratio:1; display:flex; align-items:center; justify-content:center; font-size:.7rem; border-radius:3px; }
 #msg { color:#555; }
 svg text { font-size:11px; fill:#555; }
+.setup, .filters { font-size:.9rem; color:#444; }
+.setup input[type=text] { font:inherit; padding:5px 8px; border:1px solid #aaa; border-radius:6px; }
+.filters select { font:inherit; padding:4px; }
+.heat div.low { background:#eee; color:#aaa; }
+.heat-wrap { display:flex; gap:24px; flex-wrap:wrap; }
+.heat-wrap > div { flex:1 1 280px; max-width:360px; }
+.note { color:#555; font-size:.85rem; margin:4px 0 8px; }
+.kv th { text-align:left; font-weight:600; width:45%; }
+.kv td { text-align:left; }
