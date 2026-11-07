@@ -1,0 +1,31 @@
+:root { --cream:#fdf3d8; --blue:#0b2a6b; --ink:#1b1b1f; --line:#d9cfae; --bg:#fafafa; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:system-ui,sans-serif; color:var(--ink); background:var(--bg); }
+header { display:flex; justify-content:space-between; align-items:center; padding:12px 20px; border-bottom:1px solid #ddd; background:#fff; flex-wrap:wrap; gap:8px; }
+h1 { font-size:1.2rem; margin:0; }
+main { max-width:760px; margin:0 auto; padding:16px; }
+button, .button { font:inherit; padding:8px 14px; border:1px solid #888; border-radius:6px; background:#fff; cursor:pointer; display:inline-block; }
+button:hover, .button:hover { background:#f0f0f0; }
+button:disabled { opacity:.5; cursor:default; }
+.primary { background:var(--blue); color:#fff; border-color:var(--blue); }
+.primary:hover { background:#143a8c; }
+.danger { color:#a00; border-color:#a00; }
+.tab.active { background:var(--blue); color:#fff; border-color:var(--blue); }
+.toolbar { display:flex; align-items:center; gap:12px; margin-bottom:12px; flex-wrap:wrap; }
+#target-box { font-size:1.6rem; font-weight:700; min-width:200px; }
+#progress { color:#666; margin-left:auto; }
+#grid { display:grid; grid-template-columns:repeat(10,1fr); gap:4px; aspect-ratio:1; user-select:none; }
+.cell { display:flex; align-items:center; justify-content:center; background:var(--cream); border:1px solid var(--line); border-radius:4px; font-size:clamp(.8rem,3vw,1.4rem); font-weight:600; color:transparent; cursor:pointer; }
+.cell.show { color:var(--ink); }
+.cell.done { background:var(--blue); border-color:var(--blue); color:#fff; }
+.cell.wrong { animation:shake .2s; }
+#grid.locked .cell { cursor:default; }
+@keyframes shake { 25%{transform:translateX(-3px)} 75%{transform:translateX(3px)} }
+table { border-collapse:collapse; width:100%; margin:8px 0 20px; font-size:.9rem; }
+th, td { border-bottom:1px solid #ddd; padding:6px 8px; text-align:right; }
+th:first-child, td:first-child { text-align:left; }
+h2 { font-size:1.05rem; margin:20px 0 4px; }
+.heat { display:grid; grid-template-columns:repeat(10,1fr); gap:2px; max-width:480px; }
+.heat div { aspect-ratio:1; display:flex; align-items:center; justify-content:center; font-size:.7rem; border-radius:3px; }
+#msg { color:#555; }
+svg text { font-size:11px; fill:#555; }

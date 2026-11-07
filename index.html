@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Number Selection Study</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Number Selection Study</h1>
+  <nav>
+    <button id="tab-exp" class="tab active">Experiment</button>
+    <button id="tab-stats" class="tab">Statistics</button>
+  </nav>
+</header>
+
+<main>
+  <section id="view-exp">
+    <div class="toolbar">
+      <button id="btn-start" class="primary">Start</button>
+      <div id="target-box" aria-live="polite">Press Start</div>
+      <div id="progress"></div>
+    </div>
+    <div id="grid" role="grid" aria-label="Number grid"></div>
+  </section>
+
+  <section id="view-stats" hidden>
+    <div class="toolbar">
+      <button id="btn-export">Export CSV</button>
+      <label class="button">Import CSV<input id="file-import" type="file" accept=".csv,text/csv" hidden></label>
+      <button id="btn-clear" class="danger">Delete all data</button>
+      <span id="msg"></span>
+    </div>
+    <div id="stats"></div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
