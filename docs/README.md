@@ -6,10 +6,10 @@ No build step, no dependencies, no server. Data lives in the browser (`localStor
 
 ## Running it
 
-Open `index.html` in a browser, or serve the folder:
+Open `site/index.html` in a browser, or serve the folder:
 
 ```sh
-python3 -m http.server 8000   # then visit http://localhost:8000
+npm start   # serves site/ at http://localhost:8000
 ```
 
 ## The experiment
@@ -65,9 +65,12 @@ experiment_id,started_at,sequence,number,x,y,time_ms,errors
 
 | File | Purpose |
 |---|---|
-| `index.html` | Page structure |
-| `style.css` | Styling (cream `#fdf3d8` cells, dark blue `#0b2a6b` selected) |
-| `app.js` | Experiment logic, storage, CSV, statistics |
+| `site/index.html` | Page structure |
+| `site/style.css` | Styling (cream `#fdf3d8` cells, dark blue `#0b2a6b` selected) |
+| `site/app.js` | DOM wiring: experiment flow, storage, tabs, stats rendering |
+| `site/lib.js` | Pure logic (CSV, statistics, chart SVG), unit-tested |
+| `test/` | Node tests, run with `npm test` |
+| `.github/workflows/` | `ci.yml` (tests) and `pages.yml` (deploy `site/` to GitHub Pages) |
 | `docs/design.md` | Design decisions and limitations |
 
 ## Limitations

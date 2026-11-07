@@ -1,0 +1,11 @@
+{
+  "name": "number-selection-study",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Number selection study web app",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test/",
+    "start": "python3 -m http.server 8000 --directory site"
+  }
+}
