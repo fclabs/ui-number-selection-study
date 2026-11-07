@@ -2,7 +2,7 @@
 
 ## Interpretations of the brief
 
-The original request left a few points open. These are the choices made; each is a one-line change in `app.js` if you want otherwise.
+The original request left a few points open. These are the choices made; each is a one-line change in `site/app.js` if you want otherwise.
 
 | Question | Choice |
 |---|---|
